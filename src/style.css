@@ -7,9 +7,31 @@ body {
 }
 .Card {
   display: flex;
-  align-self: center;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: white;
   width: 350px;
   height: 500px;
   border-radius: 4%;
+  box-shadow: 5px 5px 10px;
+}
+.pintaArriba {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 8px;
+  font-size: 100px;
+  padding-top: 0px;
+}
+.pintaAbajo {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 8px;
+  font-size: 100px;
+  padding-bottom: 0px;
+}
+
+.numeroCarta {
+  display: flex;
+  justify-content: center;
+  font-size: 120px;
 }
