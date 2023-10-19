@@ -52,10 +52,15 @@ body {
     color: red;
   }
 }
+.container {
+  margin: 5px;
+  width: auto;
+}
 button {
   border-radius: 8px;
-  background-color: blue;
+  background-color: rgb(40, 153, 224);
   color: white;
-  padding: 4px;
   margin: 5px;
+  padding: 10px;
+  font-size: 15px;
 }
