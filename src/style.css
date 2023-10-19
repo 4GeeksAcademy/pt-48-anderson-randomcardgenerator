@@ -1,4 +1,5 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
 body {
   background-color: green;
   display: flex;
@@ -14,24 +15,47 @@ body {
   height: 500px;
   border-radius: 4%;
   box-shadow: 5px 5px 10px;
-}
-.pintaArriba {
-  display: flex;
-  justify-content: flex-start;
-  padding-left: 8px;
-  font-size: 100px;
-  padding-top: 0px;
-}
-.pintaAbajo {
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 8px;
-  font-size: 100px;
-  padding-bottom: 0px;
-}
-
-.numeroCarta {
-  display: flex;
-  justify-content: center;
   font-size: 120px;
+  text-align: center;
+
+  &:before {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 8px;
+    font-size: 100px;
+    padding-top: 0px;
+  }
+
+  &:after {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 8px;
+    font-size: 100px;
+    padding-bottom: 0px;
+  }
+  &.spade:before,
+  &.spade:after {
+    content: "\2660";
+  }
+  &.club:before,
+  &.club:after {
+    content: "\2663";
+  }
+  &.heart:before,
+  &.heart:after {
+    content: "\2665";
+    color: red;
+  }
+  &.diam:before,
+  &.diam:after {
+    content: "\2666";
+    color: red;
+  }
+}
+button {
+  border-radius: 8px;
+  background-color: blue;
+  color: white;
+  padding: 4px;
+  margin: 5px;
 }

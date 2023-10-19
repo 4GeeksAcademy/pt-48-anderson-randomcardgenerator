@@ -1,33 +1,31 @@
 import "./style.css";
-window.onload = () => {
-  document.querySelector(".numeroCarta").innerHTML = generateRandomNumber();
-  document.querySelector(
-    ".pintaArriba",
-    ".pintaAbajo"
-  ).innerHTML = generateRandomPinta();
-};
 
+document.querySelector(".generateButton").addEventListener("click", () => {
+  document.querySelector(".Card").classList.add(generateRandomPinta());
+  document.querySelector(".Card").innerHTML = generateRandomNumber();
+});
+
+const numbersCard = [
+  "A",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+  "10",
+  "J",
+  "Q",
+  "K"
+];
 let generateRandomNumber = () => {
-  const numbersCard = [
-    "A",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-    "10",
-    "J",
-    "Q",
-    "K"
-  ];
   let numberIndex = Math.floor(Math.random() * numbersCard.length);
   return numbersCard[numberIndex];
 };
+const pintaCard = ["diam", "spade", "heart", "club"];
 let generateRandomPinta = () => {
-  const pintaCard = ["♦", "♥", "♠", "♣"];
   let pintaIndex = Math.floor(Math.random() * pintaCard.length);
   return pintaCard[pintaIndex];
 };
