@@ -20,12 +20,12 @@ const numbersCard = [
   "Q",
   "K"
 ];
-let generateRandomNumber = () => {
+const generateRandomNumber = () => {
   let numberIndex = Math.floor(Math.random() * numbersCard.length);
   return numbersCard[numberIndex];
 };
 const pintaCard = ["diam", "spade", "heart", "club"];
-let generateRandomPinta = () => {
+const generateRandomPinta = () => {
   let pintaIndex = Math.floor(Math.random() * pintaCard.length);
   return pintaCard[pintaIndex];
 };
